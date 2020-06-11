@@ -52,9 +52,9 @@ If you want to adopt the complete pipelines config as is you can use either the 
 
 All credit for their hard work with OSSEM goes to [Roberto Rodriguez](https://twitter.com/Cyb3rWard0g) and [Jose Rodriguez](https://twitter.com/Cyb3rPandaH)
 
-**Problems i expect**
+**Problems**
 
-As the entries have been created manually there was a lot of copy/paste and regex involved. I expect mistakes such as capitalization errors, missing quotation marks or spelling mistakes may appear. If you identify any of these open an issue indicating the log ID and the problem. 
+If you identify any of these open an issue indicating the log ID and the problem. 
 
 **Notes**
 
