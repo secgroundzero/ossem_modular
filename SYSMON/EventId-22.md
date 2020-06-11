@@ -18,7 +18,7 @@
 if [event_id] == 22 {
       mutate {
         rename => {
-            "RuleName" => "tag
+            "RuleName" => "tag"
             "UtcTime" => "event_date_creation"
             "ProcessGuid" => "process_guid"
             "ProcessId" => "process_id"
