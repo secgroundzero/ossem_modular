@@ -48,7 +48,7 @@ At the moment this project only contains Windows Security Logs and Sysmon logs a
 
 Events that according to Microsoft Docs are not active or dont produce any logs have been ommited. 
 
-If you want to adopt the complete pipelines config as is you can use either the complete Windows the [Windows Security](https://github.com/secgroundzero/ossem_modular/blob/master/pipelines/windows_security_events.conf) pipeline or the [SYSMON](https://github.com/secgroundzero/ossem_modular/blob/master/pipelines/sysmon_pipeline.conf) pipeline otherwise implement log by log depending on your needs.
+If you want to adopt the complete pipelines config as is you can use either the complete Windows the [Windows Security](https://github.com/secgroundzero/ossem_modular/blob/master/pipelines/windows_security_events.conf) pipeline or the [SYSMON](https://github.com/secgroundzero/ossem_modular/blob/master/pipelines/1001-sysmon_pipeline.conf) pipeline otherwise implement log by log depending on your needs.
 
 All credit for their hard work with OSSEM goes to [Roberto Rodriguez](https://twitter.com/Cyb3rWard0g) and [Jose Rodriguez](https://twitter.com/Cyb3rPandaH)
 
