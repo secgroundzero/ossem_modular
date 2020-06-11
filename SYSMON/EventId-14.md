@@ -15,7 +15,7 @@
 #### Logstash pipeline
 
 ```
-if [event_id] == 13 {
+if [event_id] == 14 {
       mutate {
         rename => {
             "RuleName" => "tag"
