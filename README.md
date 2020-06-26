@@ -6,7 +6,7 @@ Started this project for documenting Windows logs and performing threat hunting 
 
 I will often only enable specific categories using auditpol and monitor those without having to worry about logs volume. Then i use OSSEM modular to injest only the related logs and perform the threat hunting exercises this way using [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) i.e in smaller scale and building up on that.
 
-At the moment this project only contains Windows Security Logs and Sysmon logs although i plan to add more event providers.
+At the moment this project contains Windows Security Logs, Sysmon logs and some Zeek lgos although i plan to add more event providers.
 
 **Security Event Logs categories included in the repo:**
 
@@ -59,6 +59,10 @@ If you identify any of these open an issue indicating the log ID and the problem
 **Notes**
 
 Fields marked as TBD in OSSEM have been populated to what i believe is appropriate. When OSSEM is updated i will update those as well.
+
+As i could not generate all Zeek events i relied on sample logs file from [here](https://github.com/brimsec/zq-sample-data/tree/master/zeek-default):
+
+
 
 This repo is mainted for now only by me <https://twitter.com/Sec_GroundZero>
 
