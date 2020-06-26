@@ -27,7 +27,7 @@ filter {
   if [fields][zeek_log_name] == "smb_files" {
 
   grok {
-      match => { "message" => "%{NUMBER:timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:event_fuid}\t%{DATA:event_action}\t%{DATA:share_path}\t%{DATA:share_relative_target_name}\t%{DATA:file_size}\t%{DATA:file_previous_name}\t%{DATA:file_modified_time}\t%{DATA:file_accessed_time}\t%{DATA:file_creation_time}\t%{DATA:file_changed_time}" 
+      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:event_fuid}\t%{DATA:event_action}\t%{DATA:share_path}\t%{DATA:share_relative_target_name}\t%{DATA:file_size}\t%{DATA:file_previous_name}\t%{DATA:file_modified_time}\t%{DATA:file_accessed_time}\t%{DATA:file_creation_time}\t%{DATA:file_changed_time}" }
       }
     }
   }

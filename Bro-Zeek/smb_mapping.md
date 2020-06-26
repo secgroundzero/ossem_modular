@@ -21,7 +21,7 @@ filter {
   if [fields][zeek_log_name] == "smb_mapping" {
 
   grok {
-      match => { "message" => "%{NUMBER:timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:share_name}\t%{DATA:smb_service_type}\t%{DATA:file_system_type}\t%{DATA:share_type}" 
+      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:share_name}\t%{DATA:smb_service_type}\t%{DATA:file_system_type}\t%{DATA:share_type}" } 
       }
     }
   }

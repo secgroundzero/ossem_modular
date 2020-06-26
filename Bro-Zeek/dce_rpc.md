@@ -20,7 +20,7 @@ filter {
   if [fields][zeek_log_name] == "dce_rpc" {
 
   grok {
-      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:request_rtt}\t%{GREEDYDATA:rpc_server_named_pipe}\t%{DATA:rpc_server_pipe_name}\t%{GREEDYDATA:rpc_pipe_action}" 
+      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:request_rtt}\t%{GREEDYDATA:rpc_server_named_pipe}\t%{DATA:rpc_server_pipe_name}\t%{GREEDYDATA:rpc_pipe_action}" } 
       }
     }
   }

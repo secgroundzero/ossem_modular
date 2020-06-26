@@ -24,7 +24,7 @@ filter {
   if [fields][zeek_log_name] == "ntlm" {
 
   grok {
-      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:ntlm_username}\t%{DATA:ntlm_client_hostname}\t%{DATA:ntlm_client_domain_name}\t%{DATA:ntlm_server_netbios_name}\t%{DATA:ntlm_server_dns_name}\t%{GREEDYDATA:ntlm_server_tree_name}\t%{GREEDYDATA:ntlm_auth_status}" 
+      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:ntlm_username}\t%{DATA:ntlm_client_hostname}\t%{DATA:ntlm_client_domain_name}\t%{DATA:ntlm_server_netbios_name}\t%{DATA:ntlm_server_dns_name}\t%{GREEDYDATA:ntlm_server_tree_name}\t%{GREEDYDATA:ntlm_auth_status}" }
       }
     }
   }

@@ -32,7 +32,7 @@ filter {
   if [fields][zeek_log_name] == "ssl" {
 
   grok {
-      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:tls_version}\t%{DATA:tls_cipher}\t%{DATA:tls_curve}\t%{DATA:dst_host_name}\t%{DATA:tls_resumed}\t%{DATA:tls_last_alert}\t%{DATA:tls_next_protocol}\t%{DATA:tls_established}\t%{DATA:zeek_uid_cert_chain_fuids}\t%{DATA:zeek_uid_client_cert_chain_fuids}\t%{DATA:dst_certificate_subject_name}\t%{DATA:dst_certificate_issuer_name}\t%{DATA:certificate_subject}\t%{DATA:certificate_issuer}\t%{GREEDYDATA:tls_certificate_validation_status}" 
+      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:tls_version}\t%{DATA:tls_cipher}\t%{DATA:tls_curve}\t%{DATA:dst_host_name}\t%{DATA:tls_resumed}\t%{DATA:tls_last_alert}\t%{DATA:tls_next_protocol}\t%{DATA:tls_established}\t%{DATA:zeek_uid_cert_chain_fuids}\t%{DATA:zeek_uid_client_cert_chain_fuids}\t%{DATA:dst_certificate_subject_name}\t%{DATA:dst_certificate_issuer_name}\t%{DATA:certificate_subject}\t%{DATA:certificate_issuer}\t%{GREEDYDATA:tls_certificate_validation_status}" }
       }
     }
   }

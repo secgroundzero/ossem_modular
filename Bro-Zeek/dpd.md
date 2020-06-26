@@ -21,7 +21,7 @@ filter {
   if [fields][zeek_log_name] == "dpd" {
 
   grok {
-      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:dpd_violation_protocol}\t%{DATA:dpd_violation_analyzer}\t%{GREEDYDATA:dpd_failure_reason}" 
+      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:dpd_violation_protocol}\t%{DATA:dpd_violation_analyzer}\t%{GREEDYDATA:dpd_failure_reason}" }
       }
     }
   }

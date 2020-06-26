@@ -34,7 +34,7 @@ filter {
   if [fields][zeek_log_name] == "rdp" {
 
   grok {
-      match => { "message" => "%{NUMBER:timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:rdp_client_cookie}\t%{DATA:rdp_connection_status}\t%{DATA:rdp_server_security_protocol}\t%{DATA:rdp_client_channels}\t%{DATA:rdp_keyboard_layout}\t%{DATA:rdp_client_build}\t%{DATA:rdp_client_domain_name}\t%{DATA:rdp_client_product_id}\t%{DATA:rdp_client_window_width}\t%{DATA:rdp_client_window_height}\t%{DATA:rdp_client_color_depth}\t%{DATA:rdp_cert_type}\t%{DATA:rdp_cert_count}\t%{DATA:rdp_cert_permanent}\t%{DATA:rdp_encryption_level}\t%{DATA:rdp_encyption_method}" 
+      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{DATA:rdp_client_cookie}\t%{DATA:rdp_connection_status}\t%{DATA:rdp_server_security_protocol}\t%{DATA:rdp_client_channels}\t%{DATA:rdp_keyboard_layout}\t%{DATA:rdp_client_build}\t%{DATA:rdp_client_domain_name}\t%{DATA:rdp_client_product_id}\t%{DATA:rdp_client_window_width}\t%{DATA:rdp_client_window_height}\t%{DATA:rdp_client_color_depth}\t%{DATA:rdp_cert_type}\t%{DATA:rdp_cert_count}\t%{DATA:rdp_cert_permanent}\t%{DATA:rdp_encryption_level}\t%{DATA:rdp_encyption_method}" }
       }
     }
   }
