@@ -49,7 +49,7 @@ filter {
   if [fields][zeek_log_name] == "http" {
 
   grok {
-      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{INT:trans_depth}\t%{DATA:http_request_method}\t%{DATA:url_host_name}\t%{DATA:url_original}\t%{DATA:httpreferrer_original}\t%{DATA:http_version}\t%{DATA:user_agent_original}\t%{NUMBER:http_request_body_bytes}\t%{NUMBER:http_request_body_bytes}\t%{DATA:http_status_code}\t%{DATA:http_status_message}\t%{DATA:http_informational_code}\t%{DATA:http_informational_message}\t%{DATA:src_file_path}\t%{DATA:tags}\t%{DATA:url_user_name}\t%{DATA:url_user_password}\t%{DATA:request_proxied}\t%{DATA:zeek_uid_orig_fuids}\t%{DATA:src_mime_type}\t%{DATA:zeek_uid_resp_fuids}\t%{DATA:dst_file_path}\t%{DATA:dst_mime_type}" 
+      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{INT:trans_depth}\t%{DATA:http_request_method}\t%{DATA:url_host_name}\t%{DATA:url_original}\t%{DATA:httpreferrer_original}\t%{DATA:http_version}\t%{DATA:user_agent_original}\t%{NUMBER:http_request_body_bytes}\t%{NUMBER:http_request_body_bytes}\t%{DATA:http_status_code}\t%{DATA:http_status_message}\t%{DATA:http_informational_code}\t%{DATA:http_informational_message}\t%{DATA:src_file_path}\t%{DATA:tags}\t%{DATA:url_user_name}\t%{DATA:url_user_password}\t%{DATA:request_proxied}\t%{DATA:zeek_uid_orig_fuids}\t%{DATA:src_mime_type}\t%{DATA:zeek_uid_resp_fuids}\t%{DATA:dst_file_path}\t%{DATA:dst_mime_type}" }
       }
     }
   }
