@@ -36,7 +36,7 @@ filter {
   if [fields][zeek_log_name] == "dns" {
 
   grok {
-      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:orig_p}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{WORD:network_protocol}\t%{INT:dns_transaction_id}\t-\t%{GREEDYDATA:dns_query_name}\t%{GREEDYDATA:dns_query_class}\t%{GREEDYDATA:dns_query_class_name}\t%{GREEDYDATA:dns_query_type}\t%{GREEDYDATA:dns_query_type_name}\t%{GREEDYDATA:dns_response_code}\t%{GREEDYDATA:dns_response_code_name}\t%{GREEDYDATA:dns_flags_authoritative}\t%{GREEDYDATA:dns_flags_truncated}\t%{GREEDYDATA:dns_flags_recursion_desired}\t%{GREEDYDATA:dns_flags_recursion_available}\t%{GREEDYDATA:dns_flags_z}\t%{GREEDYDATA:dns_response_name}\t%{GREEDYDATA:dns_response_ttl}\t%{GREEDYDATA:dns_rejected}" 
+      match => { "message" => "%{NUMBER:@timestamp}\t%{NOTSPACE:event_uid}\t%{IP:src_ip_addr}\t%{INT:src_port}\t%{IP:dst_ip_addr}\t%{INT:dst_port}\t%{WORD:network_protocol}\t%{INT:dns_transaction_id}\t-\t%{GREEDYDATA:dns_query_name}\t%{GREEDYDATA:dns_query_class}\t%{GREEDYDATA:dns_query_class_name}\t%{GREEDYDATA:dns_query_type}\t%{GREEDYDATA:dns_query_type_name}\t%{GREEDYDATA:dns_response_code}\t%{GREEDYDATA:dns_response_code_name}\t%{GREEDYDATA:dns_flags_authoritative}\t%{GREEDYDATA:dns_flags_truncated}\t%{GREEDYDATA:dns_flags_recursion_desired}\t%{GREEDYDATA:dns_flags_recursion_available}\t%{GREEDYDATA:dns_flags_z}\t%{GREEDYDATA:dns_response_name}\t%{GREEDYDATA:dns_response_ttl}\t%{GREEDYDATA:dns_rejected}" 
       }
     }
   }
